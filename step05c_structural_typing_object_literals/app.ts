@@ -88,12 +88,12 @@ myType = myType3;//Case 2: Error, renamed or missing property, rule same for sta
 //Case 2b
 //A type can include an index signature to explicitly indicate that excess properties are permitted in with fresh objects:
 
-var x: { id: number, [x: string]: any };//Note now 'x' can have any name, just that the property should be of type string
-var y = { id: 1, fullname: "Zia" };
-x = y;// Ok, `fullname` matched by index signature
+// var x: { id: number, [x: string]: any };//Note now 'x' can have any name, just that the property should be of type string
+// var y = { id: 1, fullname: "Zia" };
+// x = y;// Ok, `fullname` matched by index signature
 
 
-var myType4 = { id: 2,  name: "Tom", age: 22 };
+// var myType4 = { id: 2,  name: "Tom", age: 22 };
 
 //Case 3
 myType = myType4;//Case 3: Ok, excess property allowed in case of stale object which is different from fresh object
